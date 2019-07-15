@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+<head>
+    {% include "prodweb/gatag.html" %}
+    <link rel="stylesheet" type="text/css" href="{% static 'prodweb/desktop_index.css' %}">
+    <script type="text/javascript" src="{% static 'prodweb/d3.js' %}"></script>
+    <script type="text/javascript" src="{% static 'prodweb/d3_headers.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1 class="titleText">William Harding</h1>
+    <h2 class="titleText">Data analytics and infrastructure speicialist</h2>
+    <div id="presentation">
+    <img src="{% static "prodweb/profile.jpg" %}" alt="My image">
+    </div>
+    <p>I build tools and infrastructure, from proof of concept to final delivery, that make sense of unorganized data and enable decision making.</p>
+    {% include "prodweb/carosel.html" %}
+</body>
+</html>

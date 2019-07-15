@@ -1,0 +1,18 @@
+.titleText {
+	text-align:center
+}
+
+#codeToggleButton {
+	z-index: 100;
+	position: fixed;
+	top: 30px;
+}
+
+img {
+	margin:0 auto;
+	display:block;
+	text-align: center;
+	border-radius: 40%;
+	width: 30%
+}
+
