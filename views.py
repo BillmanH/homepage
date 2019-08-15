@@ -19,7 +19,7 @@ def index(request):
         carosel_items.append({"title":notebook['title'],
             "subtext":notebook['subtext'],
             "link":notebook['filename'],
-            "type":notebook['type']}) #currently the titel and the link are the same thing. I might change this in the future. 
+            "type":notebook['type']}) #currently the title and the link are the same thing. I might change this in the future. 
     context = {
         'articles':carosel_items,
         'notebooks':notebooks
