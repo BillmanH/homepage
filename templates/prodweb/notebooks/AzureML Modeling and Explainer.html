@@ -13116,13 +13116,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="AzureML,-full-process-from-start-to-finish.">AzureML, full process from start to finish.<a class="anchor-link" href="#AzureML,-full-process-from-start-to-finish.">&#182;</a></h1><h2 id="the-missing-documentation">the missing documentation<a class="anchor-link" href="#the-missing-documentation">&#182;</a></h2><p>The <a href="https://docs.microsoft.com/en-us/python/api/overview/azure/ml/intro?view=azure-ml-py">AzureML sdk</a> in python is fantastic, yet lacking in some of the documentation that you need to get some of the features to work propperly. Here I'm going to go over some of the basics that I use and how I work around some of the issues that I've found in the API. I figured these things out just by going through the raw code on github and the autocompletion tab in my IDE. Eventually the documentaion will catch up, but until then you are welcome to use the dataset that I have here. I'm using the Iris dataset and just doing some basic linear regression models but this code should be applicable on any datasets.</p>
+<h1 id="AzureML,-full-process-from-start-to-finish.">AzureML, full process from start to finish.<a class="anchor-link" href="#AzureML,-full-process-from-start-to-finish.">&#182;</a></h1><h2 id="the-missing-documentation">the missing documentation<a class="anchor-link" href="#the-missing-documentation">&#182;</a></h2><p>The <a href="https://docs.microsoft.com/en-us/python/api/overview/azure/ml/intro?view=azure-ml-py">AzureML sdk</a> in python is fantastic, yet lacking in some of the documentation that you need to get some of the features to work properly. Here I'm going to go over some of the basics that I use and how I work around some of the issues that I've found in the API. I figured these things out just by going through the raw code on github and the autocompletion tab in my IDE. Eventually the documentation will catch up, but until then you are welcome to use the dataset that I have here. I'm using the Iris dataset and just doing some basic linear regression models but this code should be applicable on any datasets.</p>
 <p>Most of AzureML's documentation is very straightforward. The only things that might save you some time are:</p>
 <ul>
-<li>authentication to specific tennats (if you own more that one)</li>
-<li>using the kernal explainer for classification problems. </li>
+<li>authentication to specific tenants (if you own more that one)</li>
+<li>using the kernel explainer for classification problems. </li>
 </ul>
-<p><strong>note</strong>: Some of these components crash in Jupyter Labs due to the lack of JS. While I preffer labs I run Notebooks when I use AzureML.</p>
+<p><strong>note</strong>: Some of these components crash in Jupyter Labs due to the lack of JS. While I prefer labs I run Notebooks when I use AzureML.</p>
 
 </div>
 </div>
@@ -13161,7 +13161,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>The <code>InteractiveLoginAuthentication</code> <a href="https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.authentication.interactiveloginauthentication?view=azure-ml-py">docs here</a> makes it easy to log into the azure ML tennat. This step is often missing from the tutorials and notebooks on the Azure Docs page. This is especially important if you manage multiple Azure tennants. </li>
+<li>The <code>InteractiveLoginAuthentication</code> <a href="https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.authentication.interactiveloginauthentication?view=azure-ml-py">docs here</a> makes it easy to log into the azure ML tenant. This step is often missing from the tutorials and notebooks on the Azure Docs page. This is especially important if you manage multiple Azure tenants. </li>
 <li>The <code>PFIExplainer</code> <a href="https://docs.microsoft.com/en-us/python/api/azureml-explain-model/azureml.explain.model.permutation.permutation_importance.pfiexplainer?view=azure-ml-py">docs here</a> is the one that is simplest as it applies to a <em>black box</em> model.</li>
 </ul>
 
@@ -13328,8 +13328,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Define-Global-Variables-Beforehand">Define Global Variables Beforehand<a class="anchor-link" href="#Define-Global-Variables-Beforehand">&#182;</a></h2><p>The main advantage of using AutoML is being able to keep track of your experiements and compare results across different teams. 
-In order to track everything in <code>automl tags</code> (for review and reproducability purposes), record changes in the <code>tags</code> dict.  There is no real limit to the number of tags that you can add so feel free to add as many as you think will be useful. Tags can be used to filter and search through model performance at the end of the process. You can also export the logs in Json format later to do more in-depth analysis.</p>
+<h2 id="Define-Global-Variables-Beforehand">Define Global Variables Beforehand<a class="anchor-link" href="#Define-Global-Variables-Beforehand">&#182;</a></h2><p>The main advantage of using AutoML is being able to keep track of your experiments and compare results across different teams. 
+In order to track everything in <code>automl tags</code> (for review and reproducibility purposes), record changes in the <code>tags</code> dict.  There is no real limit to the number of tags that you can add so feel free to add as many as you think will be useful. Tags can be used to filter and search through model performance at the end of the process. You can also export the logs in Json format later to do more in-depth analysis.</p>
 
 </div>
 </div>
@@ -13520,7 +13520,7 @@ WARNING - You have logged in. Now let us find all the subscriptions to which you
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>sometimes the y variables aren't in the shape that I'm looking for. This isn't the case with the iris set but I left it in anyways as it is convinient cleaning.</p>
+<p>sometimes the y variables aren't in the shape that I'm looking for. This isn't the case with the iris set but I left it in anyways as it is convenient cleaning.</p>
 
 </div>
 </div>
@@ -13963,7 +13963,7 @@ Pipeline(memory=None,
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Note that the AutoML has allready gone through the train/test split process when refining the model. I'm only demonostrating here after the fact to show that it has been able to predect on <strong>net new data</strong>.</p>
+<p>Note that the AutoML has already gone through the train/test split process when refining the model. I'm only demonstrating here after the fact to show that it has been able to predict on <strong>net new data</strong>.</p>
 
 </div>
 </div>
@@ -14193,7 +14193,7 @@ var element = $('#441af12f-2d8c-4e09-8687-74459d15b46d');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sepal Length and Sepal Width were not as usefull in predicting the target class.</p>
+<p>Sepal Length and Sepal Width were not as useful in predicting the target class.</p>
 
 </div>
 </div>
@@ -14334,7 +14334,7 @@ var element = $('#8423f2c9-f8e0-4829-992b-89d33408e663');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here is the wierd part. Local explanations returns a list of sorted values. It is a literal list of the lowest values to highest. Because the data is sorted, you have no idea what each value pertains to. Also because the value is a classifier, there is a <code>local_explanation</code> for each feature, for each row, for each possible class. The documentation is sparce about this, but you can tell what the data is supposed to be from the lengths here.</p>
+<p>Here is the weird part. Local explanations returns a list of sorted values. It is a literal list of the lowest values to highest. Because the data is sorted, you have no idea what each value pertains to. Also because the value is a classifier, there is a <code>local_explanation</code> for each feature, for each row, for each possible class. The documentation is sparse about this, but you can tell what the data is supposed to be from the lengths here.</p>
 
 </div>
 </div>
@@ -14735,14 +14735,14 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Depoloying-the-model">Depoloying the model<a class="anchor-link" href="#Depoloying-the-model">&#182;</a></h1>
+<h1 id="Deploying-the-model">Deploying the model<a class="anchor-link" href="#Depoloying-the-model">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If the model is approved, submit the model to the automl library so that others can use it. It's commented out as a default as you may not want to save each idividual model. Greyed out here so I don't accidentally do it and publish a model that I don't want.</p>
+<p>If the model is approved, submit the model to the automl library so that others can use it. It's commented out as a default as you may not want to save each individual model. Greyed out here so I don't accidentally do it and publish a model that I don't want.</p>
 
 </div>
 </div>
