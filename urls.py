@@ -27,5 +27,6 @@ urlpatterns = [
     path('familyTree/',include('familyTree.urls')),
     path('',views.index, name='index'),
     path('blog/',views.notebook_article),
-    path('blog',views.notebook_article)
+    path('blog',views.notebook_article),
+    path('ads.txt',views.ads_text)
 ]

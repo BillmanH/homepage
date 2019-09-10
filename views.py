@@ -48,3 +48,5 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
 
+def ads_text(request):
+    return  render(request, 'prodweb/ads.txt')
