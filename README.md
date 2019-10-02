@@ -9,8 +9,8 @@ Django app for my personal homepage and content management system. This allows y
 * Business card at the bottom for Twitter and LinkedIn
 * Background image
 * Google Analytics
+* Google Ads
 
 **TODO** 
-* Google Ads
 * notebook css sheet
 * D3 embedded (as soon as jupyter labs supports it)
