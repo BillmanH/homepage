@@ -28,7 +28,11 @@ def index(request):
 
 
 def notebook_article(request):
-    article = "prodweb/notebooks/"+request.GET.get('article', None)
+    notebooks = blogs.get_notebooks_as_content()
+    fname = request.GET.get('article', 'article_not_found.html')
+    if fname not in [i['filename'] for i in notebooks]:
+        fname = 'article_not_found.html'
+    article = "prodweb/notebooks/"+fname
     context = {"article":article}
     return render(request,'prodweb/jupyter_notebook.html',context)
 
