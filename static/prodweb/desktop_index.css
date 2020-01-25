@@ -1,5 +1,14 @@
+div {
+border:1px solid black;
+border-radius: 10px;
+}
+
 .titleText {
-    text-align:center
+    text-align:center;
+}
+
+.numberText {
+
 }
 
 #codeToggleButton {
@@ -16,3 +25,6 @@ img {
     width: 30%
 }
 
+.slideshow-container {
+    boarder: 1px solid black;
+}
