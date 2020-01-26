@@ -1,10 +1,25 @@
 div {
-border:1px solid black;
-border-radius: 10px;
+    border:1px solid black;
+    border-radius: 10px;
+    font-family: sans-serif;
 }
 
 .titleText {
     text-align:center;
+    font-family: sans-serif;
+}
+
+li {
+    margin-bottom: 1px;
+    background-color: #eee;
+    list-style-type:none;
+    border:1px solid black;
+    border-radius: 5px;
+    text-align: center
+}
+
+li a {
+    text-decoration: none;
 }
 
 .numberText {
@@ -26,5 +41,17 @@ img {
 }
 
 .slideshow-container {
-    boarder: 1px solid black;
+    border: 1px solid black;
+}
+
+.contentText {
+    border: none;
+}
+
+.mySlides {
+    border: none;
+}
+
+.dots {
+    border: none;
 }
